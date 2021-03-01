@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="disaster_db" uuid="75cf2c14-ab1b-47db-b1d7-2d6cb51be714">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\timot\Documents\GitHub\Disaster_response_pipeline\disaster_db.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

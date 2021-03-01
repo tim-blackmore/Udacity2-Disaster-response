@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 pandas = "*"
 pipenv-shebang = "*"
+sqlalchemy = "==1.3.22"
 
 [requires]
 python_version = "3.7"
