@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
 import sys
 import getopt
 import logging
 import pandas as pd
+from sqlalchemy import create_engine
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -76,7 +76,20 @@ def merge_and_clean(messages_df, categories_df):
     return df
 
 
+def create_database(df, database_name):
+    """
+    creates a sqlite database from the dataframe
+    :param df: a clean dataframe
+    :param database_name: the name of the database
+    """
+    engine = create_engine('sqlite:///' + database_name + '.db')
+    df.to_sql(database_name, engine, index=False)
+    logging.debug('function:create_database:the database named {} was created successfully.'.format(database_name))
+
+
 if __name__ == "__main__":
     mesg_file_name, categ_file_name, db_name = parse_command_line_args(sys.argv[1:])
     mesg_df, categ_df = import_messages_and_categories(mesg_file_name, categ_file_name)
     clean_df = merge_and_clean(mesg_df, categ_df)
+    create_database(clean_df, db_name)
+
