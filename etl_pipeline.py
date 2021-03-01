@@ -43,7 +43,12 @@ def import_messages_and_categories(messages_file_name, categories_file_name):
 
 
 def merge_and_clean(messages_df, categories_df):
-
+    """
+    merge the two dfs and clean
+    :param messages_df: a dataframe containing the messages info
+    :param categories_df: a dataframe containing the categories info
+    :return: a clean df
+    """
     # merge datasets
     df = messages_df.merge(categories_df, on='id')
     logging.debug('function:merge_and_clean:data merge successful.')
