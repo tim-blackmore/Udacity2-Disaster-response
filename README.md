@@ -78,7 +78,7 @@ I would have like to have synthesise cases, but I found the area of research a l
 The F1 score was chosen as it accounts for both precision an recall. Due to the large class imbalance, precision will be high so using that could give us a false impression of success. We want to reward classifying the correct response for both 1 and 0. Further to this, we used the F1 score 'macro' as this lends weight to the smaller class in the class imbalance.
 
 ### 6. Deployment
-N/A.
+The project is deployed to Heroku at the following link.
 
 ## Acknowledgements
 Some functions relating to the python scripts were taken from the Udacity training materials.<br>
