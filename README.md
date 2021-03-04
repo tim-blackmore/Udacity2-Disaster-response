@@ -2,8 +2,13 @@
 A machine learning pipeline for classifying messages from natural disasters and allocation them to the correct services.
 
 # Contents
- - [Quickstar](#Quickstart) 
+ - [Quickstart](#Quickstart) 
  - [Installation](#Installation) 
+ - [How to run](#How to run) 
+ - [Motivation](#Motivation) 
+ - [Project files](#Project files) 
+ - [Project summary](#Project summary) 
+ - [Acknowledgements](#Acknowledgements) 
 
 ## Quickstart
 
@@ -19,7 +24,7 @@ The libraries used in this project are outlined in requirements.txt. They can be
 2. Install packages in virtual environment
 ```pipenv install -r requirements.txt```
 
-## How to run?
+## How to run
 1. Open a command line in the project folder.
 2. Run the following commands (the second takes a long time to run).
 
