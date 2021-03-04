@@ -43,15 +43,15 @@ This project fulfils one of the requirements for the completion of the Data Scie
 
 ## Project files
 
-- requirements.txt - Contains the required packages to set up the development envrironment.
-- process_data.py - A python script which imports, merges and clean the dataset and stores it in a SQlite database.
-- train_classifier.py - A python script which creates a machine learning pipeline and trains a random forest classifier.
-- custom_transformer.py - A python cript which contains transform classes for text data.
-- models/model.joblib - The trained model.
-- app/run.py - The flask app that runs in the web browser.
-- categories.csv - the classes for each of the categories
-- messages.csv - the mesages from which the classes relate too
-- disaster.db - the database which is an output from prcoess data.py.
+- *requirements.txt* - Contains the required packages to set up the development envrironment.
+- *process_data.py* - A python script which imports, merges and clean the dataset and stores it in a SQlite database.
+- *train_classifier.py* - A python script which creates a machine learning pipeline and trains a random forest classifier.
+- *custom_transformer.py* - A python cript which contains transform classes for text data.
+- *models/model.joblib* - The trained model.
+- *app/run.py* - The flask app that runs in the web browser.
+- *categories.csv* - the classes for each of the categories
+- *messages.csv* - the mesages from which the classes relate too
+- *disaster.db* - the database which is an output from prcoess data.py.
 
 ## Project summary
 
