@@ -4,10 +4,10 @@ A machine learning pipeline for classifying messages from natural disasters and 
 # Contents
  - [Quickstart](#Quickstart) 
  - [Installation](#Installation) 
- - [How to run](#Howtorun) 
+ - [How to run](#How-to-run) 
  - [Motivation](#Motivation) 
- - [Project files](#Projectfiles) 
- - [Project summary](#Projectsummary) 
+ - [Project files](#Project-files) 
+ - [Project summary](#Project-summary) 
  - [Acknowledgements](#Acknowledgements) 
 
 ## Quickstart
