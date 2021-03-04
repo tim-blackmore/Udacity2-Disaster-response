@@ -82,7 +82,7 @@ def create_database(df, database_name):
     :param df: a clean dataframe
     :param database_name: the name of the database
     """
-    engine = create_engine('sqlite:///' + database_name + '.db')
+    engine = create_engine('sqlite:///data/' + database_name + '.db')
     df.to_sql(database_name, engine, index=False)
     logging.debug('function:create_database:the database named {} was created successfully.'.format(database_name))
 
