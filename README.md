@@ -10,7 +10,7 @@ Navigate to www.website.com to see the project in action.
 The libraries used in this project are outlined in requirements.txt. They can be installed using the following command.
 
 1. Install pipenv.
-``` pi3 install pipenv```
+``` pip3 install pipenv```
 
 2. Install packages in virtual environment
 ```pipenv install -r requirements.txt```
@@ -19,8 +19,8 @@ The libraries used in this project are outlined in requirements.txt. They can be
 1. Open a command line in the project folder.
 2. Run the following commands (the second takes a long time to run).
 This command will output a database that the next command will use.
-``` pipenv run process_data.py -m messages.csv -c categories.csv -d disaster_db```
-\nThis will train the classifier.
+``` pipenv run process_data.py -m messages.csv -c categories.csv -d disaster_db```<br/>
+This will train the classifier.
 ``` pipenv run train_classifier```
 
 ## Motivation
