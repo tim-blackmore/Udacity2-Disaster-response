@@ -20,7 +20,7 @@ The libraries used in this project are outlined in requirements.txt. They can be
 2. Run the following commands (the second takes a long time to run).
 This command will output a database that the next command will use.
 ``` pipenv run process_data.py -m messages.csv -c categories.csv -d disaster_db```
-This will train the classifier.
+\nThis will train the classifier.
 ``` pipenv run train_classifier```
 
 ## Motivation
