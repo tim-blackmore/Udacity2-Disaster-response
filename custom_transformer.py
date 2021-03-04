@@ -9,6 +9,11 @@ nltk.download(['punkt', 'wordnet', 'averaged_perceptron_tagger', 'vader_lexicon'
 
 
 def tokenize(text):
+    """
+    tokenize text data. Replace urls, make lower case, strip whitespace, and lemmatize
+    :param text:
+    :return: the cleaned lemmatized version of the text.
+    """
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     detected_urls = re.findall(url_regex, text)
     for url in detected_urls:
@@ -26,6 +31,13 @@ def tokenize(text):
 
 
 class StartingVerbExtractor(BaseEstimator, TransformerMixin):
+    """ Calculate if first word in sentence is verb
+
+       Attributes:
+           starting_verb     The function to calculate if starting word is verb
+           fit               N/A
+           transform         The method that transforms or runs the calculation
+    """
 
     def starting_verb(self, text):
         sentence_list = nltk.sent_tokenize(text)
@@ -45,6 +57,12 @@ class StartingVerbExtractor(BaseEstimator, TransformerMixin):
 
 
 class TextLengthExtractor(BaseEstimator, TransformerMixin):
+    """ Calculates the length of the text
+
+        Attributes:
+            fit               N/A
+            transform         The method that transforms or runs the calculation
+    """
 
     def fit(self, x, y=None):
         return self
@@ -55,7 +73,12 @@ class TextLengthExtractor(BaseEstimator, TransformerMixin):
 
 
 class WordCountExtractor(BaseEstimator, TransformerMixin):
+    """ Calculates the number of words in the text
 
+        Attributes:
+            fit               N/A
+            transform         The method that transforms or runs the calculation
+    """
     def fit(self, x, y=None):
         return self
 
@@ -65,12 +88,16 @@ class WordCountExtractor(BaseEstimator, TransformerMixin):
 
 
 class SentimentExtractor(BaseEstimator, TransformerMixin):
+    """ Calculate the compound sentiment of the statement
 
+       Attributes:
+           calculate_sentiment     The function to calculate the compound sentiment
+           fit                     N/A
+           transform               The method that transforms or runs the calculation
+    """
     def calculate_sentiment(self, text):
         sia = SentimentIntensityAnalyzer()
         return sia.polarity_scores(text)["compound"]
-
-        return len(text)
 
     def fit(self, x, y=None):
         return self
