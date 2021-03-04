@@ -62,7 +62,7 @@ The two data files are treated as follows;
 3. Data are exported into an SQlite database called disaster_db.<br>
 
 ### 4. Modelling
-A random forest classfier (with a multiclassfication wrapper) was chosen to classify the text data. The data were split into training and testing sets and then entered a pipeline. The pipeline includes a feacture union which includes a number of transformers including tfidf and sentiment transformers. The model is trained using GridSearchCV optimised to train on the 'f1_micro' score to lend weight to the smaller classes (due to the large imbalances). To further account for this imbalance, I used a class weight set ot balanced in the classifier which should help with the imbalace.
+A random forest classfier (with a multiclassfication wrapper) was chosen to classify the text data. The data were split into training and testing sets and then entered a pipeline. The pipeline includes a feature union which includes a number of transformers including tfidf and sentiment transformers. The model is trained using GridSearchCV optimised to train on the 'f1_micro' score to lend weight to the smaller classes (due to the large imbalances). To further account for this imbalance, I used a class weight set to 'balanced' in the classifier which should help with the imbalace.
 
 I would have like to have synthesise cases, but I found the area of research a little sparse with suggestions of SMOTE oversampling of text data as incorrect due to its hign dimensionality.
 
@@ -73,5 +73,10 @@ The F1 score was chosen as it accounts for both precision an recall. Due to the 
 N/A.
 
 ## Acknowledgements
-Some functions relating to the linear regression were taken from the Udacity training materials.
+Some functions relating to the python scripts were taken from the Udacity training materials.<br>
+
+The following articles also helped me with some decision making.
+
+https://towardsdatascience.com/random-forest-hyperparameters-and-how-to-fine-tune-them-17aee785ee0d
+https://www.analyticsvidhya.com/blog/2020/10/improve-class-imbalance-class-weights/
 
