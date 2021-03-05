@@ -51,6 +51,7 @@ This project fulfils one of the requirements for the completion of the Data Scie
 - *custom_transformer.py* - A python cript which contains transform classes for text data.
 - *models/model.joblib* - The trained model.
 - *app/run.py* - The flask app that runs in the web browser.
+- *app/create_figures.py* - Creates the Plotly figures ready for the app.
 - *categories.csv* - the classes for each of the categories
 - *messages.csv* - the mesages from which the classes relate too
 - *disaster.db* - the database which is an output from prcoess data.py.
