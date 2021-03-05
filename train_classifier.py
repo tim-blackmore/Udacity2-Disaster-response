@@ -1,7 +1,6 @@
 # Created by timot at 02/03/2021
 import nltk
 import re
-import numpy as np
 import pandas as pd
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -56,7 +55,7 @@ def tokenize(text):
         clean_tok = lemmatizer.lemmatize(tok).lower().strip()
         clean_tokens.append(clean_tok)
 
-    logging.debug('function:tokenize: text has been cleaned and lemmatized')
+    # logging.debug('function:tokenize: text has been cleaned and lemmatized')
 
     return clean_tokens
 
@@ -83,13 +82,19 @@ def model_pipeline():
         ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
 
-    parameters = {'features__text_pipeline__tfidf__norm': ['l1', 'l2'],
-                  'clf__estimator__criterion': ["gini", "entropy"],
-                  'clf__estimator__max_features': ['auto', 'sqrt', 'log2'],
+    # parameters = {'features__text_pipeline__tfidf__norm': ['l1', 'l2'],
+    #               'clf__estimator__criterion': ["gini", "entropy"],
+    #               'clf__estimator__max_features': ['auto', 'sqrt', 'log2'],
+    #               'clf__estimator__class_weight': ['balanced']}  # used to account for class imbalance
+
+    # Best CV params
+    parameters = {'features__text_pipeline__tfidf__norm': ['l2'],
+                  'clf__estimator__criterion': ["gini"],
+                  'clf__estimator__max_features': ['sqrt'],
                   'clf__estimator__class_weight': ['balanced']}  # used to account for class imbalance
 
     # Focus on the f1 score due to the unbalanced classes
-    cv = GridSearchCV(pipeline, param_grid=parameters, scoring='f1_macro', verbose=3)
+    cv = GridSearchCV(pipeline, param_grid=parameters, verbose=3, n_jobs=-1)
 
     logging.debug('function:model_pipeline: model pipeline instantiated')
 
@@ -134,7 +139,3 @@ if __name__ == "__main__":
     dump(model, 'models/model.joblib')  # export model
 
 
-
-
-# https://towardsdatascience.com/random-forest-hyperparameters-and-how-to-fine-tune-them-17aee785ee0d
-# https://www.analyticsvidhya.com/blog/2020/10/improve-class-imbalance-class-weights/
