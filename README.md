@@ -1,5 +1,5 @@
 # Udacity2-Disaster_response_pipeline
-A machine learning pipeline for classifying messages from natural disasters and allocation them to the correct services.
+A machine learning pipeline for classifying messages from natural disasters and allocating them to the correct services.
 
 # Contents
  - [Quickstart](#Quickstart) 
