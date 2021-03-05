@@ -86,7 +86,7 @@ The F1 score was chosen to evaluate the model as it accounts for both precision 
 The resulting average F Score was 0.56.
 
 ### 6. Deployment
-The project is deployed to Heroku at the following link.
+N/A
 
 ## Acknowledgements
 Some functions relating to the python scripts were taken from the Udacity training materials.<br>
