@@ -70,12 +70,14 @@ The two data files are treated as follows;
 3. Data are exported into an SQlite database called disaster_db.<br>
 
 ### 4. Modelling
-A random forest classfier (with a multiclassfication wrapper) was chosen to classify the text data. The data were split into training and testing sets and then entered a pipeline. The pipeline includes a feature union which includes a number of transformers including tfidf and sentiment transformers. The model is trained using GridSearchCV optimised to train on the 'f1_micro' score to lend weight to the smaller classes (due to the large imbalances). To further account for this imbalance, I used a class weight set to 'balanced' in the classifier which should help with the imbalace.
+A random forest classfier (with a multiclassfication wrapper) was chosen to classify the text data. The data were split into training and testing sets and then entered a pipeline. The pipeline includes a feature union which includes a number of transformers including tfidf and sentiment transformers. The model is trained using GridSearchCV. To account for the imbalance, I used a class weight set to 'balanced' in the classifier.
 
 I would have like to have synthesise cases, but I found the area of research a little sparse with suggestions of SMOTE oversampling of text data as incorrect due to its hign dimensionality.
 
 ### 5. Evaluation
-The F1 score was chosen as it accounts for both precision an recall. Due to the large class imbalance, precision will be high so using that could give us a false impression of success. We want to reward classifying the correct response for both 1 and 0. Further to this, we used the F1 score 'macro' as this lends weight to the smaller class in the class imbalance.
+The F1 score was chosen to evaluate the model as it accounts for both precision an recall. Due to the large class imbalance, precision will be high so using that could give us a false impression of success. We want to reward classifying the correct response for both 1 and 0. Further to this, we used the F1 score 'macro' as this lends weight to the smaller class in the class imbalance.
+
+The resulting average F Score was 0.56.
 
 ### 6. Deployment
 The project is deployed to Heroku at the following link.
