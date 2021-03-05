@@ -11,10 +11,6 @@ A machine learning pipeline for classifying messages from natural disasters and 
  - [Project files](#Project-files) 
  - [Project summary](#Project-summary) 
  - [Acknowledgements](#Acknowledgements) 
-
-## Quickstart
-
-Navigate to www.website.com to see the project in action.
  
 ## Installation
 
