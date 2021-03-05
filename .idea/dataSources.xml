@@ -7,5 +7,16 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\timot\Documents\GitHub\Disaster_response_pipeline\disaster_db.db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="disaster_db [2]" uuid="d5d550d2-a029-4192-9f95-5f5de4678d9c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\timot\Documents\GitHub\Disaster_response_pipeline\data\disaster_db.db</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>
