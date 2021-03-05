@@ -65,6 +65,10 @@ We are tasked with training a machine learning model to predict the service cate
 ### 2. Data understanding
 Data has been preconfigured by Figure Eight. It includes 2 files. Firstly messages.csv which includes real messages that have been sent during the occurence of a natural disaster. The second file, categories.csv, contains the associated service categories that the messages relate too. The categories data are multi class.
 
+![image](https://user-images.githubusercontent.com/24419429/110096394-c5610100-7d95-11eb-95ee-2f06d16ceb61.png)
+
+![image](https://user-images.githubusercontent.com/24419429/110096442-d0b42c80-7d95-11eb-8895-e702b5761dca.png)
+
 ### 3. Data preparation
 The two data files are treated as follows;
 1. Data are imported
