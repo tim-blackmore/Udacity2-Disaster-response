@@ -27,6 +27,12 @@ The libraries used in this project are outlined in requirements.txt. They can be
 ```pipenv install -r requirements.txt```
 
 ## How to run
+
+To run the app locally. 
+1. Run the following command and click the link in the terminal.<br>
+``` pipenv run run.py```
+
+To run the files individually.
 1. Open a command line in the project folder.
 2. Run the following commands (the second takes a long time to run).
 
@@ -36,8 +42,7 @@ This command will output a database that the next command will use.<br/>
 This will train the classifier.<br/>
 ``` pipenv run train_classifier.py```
 
-To run the app locally. Run the fllowing command and clikc the link in the terminal.<br>
-``` pipenv run run.py```
+
 
 ## Motivation
 
