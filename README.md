@@ -38,8 +38,6 @@ This command will output a database that the next command will use.<br/>
 This will train the classifier.<br/>
 ``` pipenv run train_classifier.py```
 
-
-
 ## Motivation
 
 This project fulfils one of the requirements for the completion of the Data Science nanodegree with Udacity. 
