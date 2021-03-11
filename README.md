@@ -12,6 +12,7 @@ A machine learning pipeline for classifying messages from natural disasters and 
  - [Project summary](#Project-summary) 
  - [Acknowledgements](#Acknowledgements) 
  
+ 
 ## Installation
 
 The libraries used in this project are outlined in requirements.txt. They can be installed using the following command.
